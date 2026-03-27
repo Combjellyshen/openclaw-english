@@ -39,7 +39,7 @@ def build_exclusion_block(history: list[dict]) -> str:
         title = entry.get("title", "?")
         source = entry.get("source", "?")
         url = entry.get("url", "")
-        topic = entry.get("topic", "")
+        topic = entry.get("topic") or ""
         date = entry.get("date", "")
         lines.append(f"- [{date}] \"{title}\" ({source}) — topic: {topic}")
         if topic:

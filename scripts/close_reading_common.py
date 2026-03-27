@@ -234,6 +234,9 @@ def render_template(text: str, mapping: Dict[str, str]) -> str:
     rendered = text
     for key, value in mapping.items():
         rendered = rendered.replace("{{" + key + "}}", value)
+    remaining = re.findall(r"\{\{[A-Z_]+\}\}", rendered)
+    if remaining:
+        raise ValueError(f"模板中有未替换的变量：{remaining}")
     return rendered
 
 
