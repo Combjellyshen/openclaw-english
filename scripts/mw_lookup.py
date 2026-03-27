@@ -12,6 +12,7 @@ Output: JSON with definitions, etymology, pronunciation, examples.
 from __future__ import annotations
 
 import json
+import re
 import sys
 import urllib.request
 import urllib.error
@@ -70,7 +71,6 @@ def _flatten_dt(dt_list: list) -> str:
                 text = str(content)
                 text = text.replace("{bc}", "").replace("{/it}", "").replace("{ldquo}", """).replace("{rdquo}", """)
                 # Remove {it}...patterns
-                import re
                 text = re.sub(r"\{it\}", "", text)
                 text = re.sub(r"\{[^}]*\}", "", text)
                 parts.append(text.strip())
@@ -78,7 +78,6 @@ def _flatten_dt(dt_list: list) -> str:
                 # example sentences
                 for vis_item in content:
                     if isinstance(vis_item, dict) and "t" in vis_item:
-                        import re
                         ex = re.sub(r"\{[^}]*\}", "", vis_item["t"]).strip()
                         parts.append(f"  例: {ex}")
     return "\n".join(parts)
@@ -86,7 +85,6 @@ def _flatten_dt(dt_list: list) -> str:
 
 def parse_entry(raw: dict) -> dict:
     """Parse a single MW dictionary entry into a clean structure."""
-    import re
 
     result = {
         "headword": raw.get("meta", {}).get("id", "").split(":")[0],

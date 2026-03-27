@@ -176,7 +176,7 @@ def md_to_pdf(md_path: Path, out_path: Path) -> None:
     # Pre-process emoji headings since some fonts fail or misalign on them
     import re
     # Remove emoji from headings (e.g., "## 📐 行文结构分析" -> "## 行文结构分析")
-    md_text = re.sub(r'^(#+\s)[^\w\s]+\s+', r'\1', md_text, flags=re.MULTILINE)
+    md_text = re.sub(r'^(#+\s)[^\w\s]+\s*', r'\1', md_text, flags=re.MULTILINE)
 
     # Convert markdown to HTML
     html_body = markdown.markdown(

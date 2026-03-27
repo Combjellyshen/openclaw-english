@@ -40,6 +40,9 @@ def split_entries(markdown: str) -> List[str]:
     entries: List[str] = []
     for i, head in enumerate(heads):
         body = parts[i + 1] if i + 1 < len(parts) else ""
+        # Strip trailing section separators (---) and ## headings that bleed
+        # into the last entry of each section
+        body = re.sub(r"\n---\s*(\n##\s+.*)?$", "", body.rstrip())
         entries.append(head + "\n" + body)
     return entries
 

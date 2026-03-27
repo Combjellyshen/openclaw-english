@@ -234,6 +234,9 @@ def render_template(text: str, mapping: Dict[str, str]) -> str:
     rendered = text
     for key, value in mapping.items():
         rendered = rendered.replace("{{" + key + "}}", value)
+    unreplaced = re.findall(r"\{\{[A-Z_]+\}\}", rendered)
+    if unreplaced:
+        raise ValueError(f"render_template: unreplaced variables: {unreplaced}")
     return rendered
 
 

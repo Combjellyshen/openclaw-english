@@ -126,7 +126,8 @@ def cmd_quiz(data):
     # Section 1: 英译中
     print("## 一、看词选义（英 → 中）\n")
     for i, w in enumerate(quiz_words[:4], 1):
-        distractors = random.sample([x["meaning_zh"] for x in data["words"] if x["id"] != w["id"]], min(3, len(data["words"]) - 1))
+        pool = [x["meaning_zh"] for x in data["words"] if x["id"] != w["id"]]
+        distractors = random.sample(pool, min(3, len(pool)))
         options = distractors[:3] + [w["meaning_zh"]]
         random.shuffle(options)
         correct = chr(65 + options.index(w["meaning_zh"]))
