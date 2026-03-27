@@ -1,0 +1,32 @@
+{
+  "source": "https://github.com/KyleBing/english-vocabulary",
+  "synced_at": "2026-03-15T13:33:36.355115+00:00",
+  "lists": {
+    "cet6": {
+      "files": [
+        "CET6_1.json",
+        "CET6_2.json",
+        "CET6_3.json"
+      ],
+      "entry_count": 3991,
+      "output": "data/exam-vocab/cet6.json"
+    },
+    "sat": {
+      "files": [
+        "SAT_2.json",
+        "SAT_3.json"
+      ],
+      "entry_count": 4464,
+      "output": "data/exam-vocab/sat.json"
+    },
+    "kaoyan": {
+      "files": [
+        "KaoYan_1.json",
+        "KaoYan_2.json",
+        "KaoYan_3.json"
+      ],
+      "entry_count": 5047,
+      "output": "data/exam-vocab/kaoyan.json"
+    }
+  }
+}

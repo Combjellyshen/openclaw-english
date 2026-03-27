@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+
+# 敏感配置（含 API key / Telegram ID）
+config/profile.json
+config/claude_dispatch.json
+
+# 缓存和运行产物
+data/mw-cache/
+data/vocab-system/
+reading-log/pdfs/
+reading-log/runs/
+reading-log/vocab-drills/
+reading-log/weekly-vocab/
+*.pdf
+
+# 个人数据
+reading-log/articles/
+memory/
+vocabulary/
+.openclaw/
+
+# 临时文件
+.tmp-*
+tmp_*.txt
+
+# Skills（symlink 到外部 skill-library，见 SKILLS.md）
+skills/
+
+# 扩展（含本地路径）
+extensions/

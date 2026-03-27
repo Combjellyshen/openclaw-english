@@ -1,0 +1,65 @@
+{
+  "_note": "模型路由配置。查找优先级：{pipeline}.{task} → {task} → fallback。null = opus（系统默认）。\"sonnet\" = claude-sonnet-4-6。",
+
+  "stage_models": {
+
+    "_section": "═══ 通用默认 ═══",
+    "structure_summary": "sonnet",
+    "grammar":           null,
+    "insights":          null,
+    "discussion_exam":   "sonnet",
+
+    "definitions":       "sonnet",
+    "collocations":      "sonnet",
+    "polysemy":          null,
+    "derivation":        "sonnet",
+    "examples":          "sonnet",
+    "mnemonic":          "sonnet",
+    "etymology":         "sonnet",
+
+    "review_summary":    "sonnet",
+    "weekly_exam":       "sonnet",
+    "study_plan":        "sonnet",
+
+    "vocab_enrich":      "sonnet",
+
+    "_section_close_reading": "═══ 精读 pipeline ═══",
+    "close-reading.structure_summary": "sonnet",
+    "close-reading.grammar":           null,
+    "close-reading.insights":          null,
+    "close-reading.discussion_exam":   "sonnet",
+
+    "_section_daily_vocab": "═══ 每日词卡 ═══",
+    "daily-vocab.definitions": "sonnet",
+    "daily-vocab.collocations": "sonnet",
+    "daily-vocab.polysemy":    null,
+    "daily-vocab.derivation":  "sonnet",
+    "daily-vocab.examples":    "sonnet",
+    "daily-vocab.mnemonic":    "sonnet",
+    "daily-vocab.etymology":   "sonnet",
+
+    "_section_weekly_vocab": "═══ 每周综合卷 ═══",
+    "weekly-vocab.review_summary": "sonnet",
+    "weekly-vocab.weekly_exam":    "sonnet",
+    "weekly-vocab.study_plan":     "sonnet"
+  },
+
+  "fallback": "sonnet",
+
+  "_rationale": {
+    "grammar": "逐句语法拆解需要精准分析，保持 opus",
+    "insights": "语言学对比 + 文化洞察需要深度推理，保持 opus",
+    "definitions": "完整词义归并是结构化整理任务，sonnet 足够",
+    "collocations": "搭配补全是结构化生成任务，sonnet 足够",
+    "polysemy": "多义辨析需要语义分化推理，保持 opus",
+    "structure_summary": "结构归纳是模板化任务，sonnet 足够",
+    "discussion_exam": "出题是结构化任务，sonnet 足够",
+    "derivation": "派生关系结构化，sonnet 足够",
+    "examples": "造句不需要深度推理，sonnet 足够",
+    "mnemonic": "助记构造相对轻量，sonnet 足够",
+    "etymology": "大部分数据来自 MW API，Claude 只是整理，sonnet 足够",
+    "review_summary": "汇总类任务，sonnet 足够",
+    "weekly_exam": "出题是结构化任务，sonnet 足够",
+    "study_plan": "简单规划，sonnet 足够"
+  }
+}
